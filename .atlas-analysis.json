@@ -1,0 +1,172 @@
+{
+  "projectType": "saas",
+  "projectName": "Blozink ERP",
+  "projectDescription": "Multi-company ERP system for Chilean businesses with accounting, tax compliance, and bank reconciliation.",
+  "theme": "linden",
+  "primaryColor": "#2563eb",
+  "lightColor": "#3b82f6",
+  "darkColor": "#1e40af",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "introduction",
+              "quickstart",
+              "installation"
+            ]
+          },
+          {
+            "group": "Core Concepts",
+            "pages": [
+              "concepts/multi-company",
+              "concepts/authentication",
+              "concepts/roles-permissions",
+              "concepts/architecture"
+            ]
+          },
+          {
+            "group": "Accounting",
+            "pages": [
+              "accounting/chart-of-accounts",
+              "accounting/journal-entries",
+              "accounting/balance-sheet",
+              "accounting/libro-mayor"
+            ]
+          },
+          {
+            "group": "Tax Compliance",
+            "pages": [
+              "tax/dte-documents",
+              "tax/form-29",
+              "tax/honorarios",
+              "tax/sii-integration"
+            ]
+          },
+          {
+            "group": "Bank Reconciliation",
+            "pages": [
+              "reconciliation/overview",
+              "reconciliation/intelligent-matching",
+              "reconciliation/bank-movements",
+              "reconciliation/payment-gateways"
+            ]
+          },
+          {
+            "group": "Integrations",
+            "pages": [
+              "integrations/mercadopago",
+              "integrations/flow",
+              "integrations/bank-imports"
+            ]
+          },
+          {
+            "group": "Administration",
+            "pages": [
+              "admin/user-management",
+              "admin/company-setup",
+              "admin/audit-logs"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "API Reference",
+        "groups": [
+          {
+            "group": "Authentication",
+            "pages": [
+              "api/auth/register",
+              "api/auth/login",
+              "api/auth/profile"
+            ]
+          },
+          {
+            "group": "Accounting",
+            "pages": [
+              "api/accounting/journal",
+              "api/accounting/chart-accounts",
+              "api/accounting/balance"
+            ]
+          },
+          {
+            "group": "Tax Forms",
+            "pages": [
+              "api/tax/dte-upload",
+              "api/tax/form-29",
+              "api/tax/honorarios"
+            ]
+          },
+          {
+            "group": "Reconciliation",
+            "pages": [
+              "api/reconciliation/matches",
+              "api/reconciliation/bank-movements",
+              "api/reconciliation/gateway-settlements"
+            ]
+          },
+          {
+            "group": "Entities",
+            "pages": [
+              "api/entities/customers",
+              "api/entities/suppliers",
+              "api/entities/import"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Deployment",
+        "groups": [
+          {
+            "group": "Setup",
+            "pages": [
+              "deployment/environment-variables",
+              "deployment/database-setup",
+              "deployment/migrations"
+            ]
+          },
+          {
+            "group": "Railway",
+            "pages": [
+              "deployment/railway-setup",
+              "deployment/railway-database",
+              "deployment/railway-deploy"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Multi-company tenant management with role-based access control",
+    "Complete accounting system with chart of accounts and journal entries",
+    "Chilean tax compliance with Form 29 and DTE document management",
+    "Intelligent bank reconciliation with automated matching algorithms",
+    "Payment gateway integrations (MercadoPago, Flow)",
+    "SII integration for tax document validation and submission",
+    "Audit logging and comprehensive financial reporting",
+    "Real-time dashboard with financial metrics and alerts"
+  ],
+  "publicApiSurface": [
+    "POST /api/auth/register - Register new user",
+    "POST /api/auth/login - Authenticate user",
+    "GET /api/auth/me - Get current user profile",
+    "GET /api/accounting/journal - Retrieve journal entries",
+    "POST /api/accounting/proposals/save - Create accounting proposal",
+    "GET /api/accounting/mayor/:accountId - Get ledger for account",
+    "POST /api/ingest/dte - Upload DTE documents",
+    "GET /api/tax-forms/f29 - Retrieve Form 29 data",
+    "POST /api/tax-forms/f29 - Generate Form 29",
+    "GET /api/reconciliation/suggestions - Get matching suggestions",
+    "POST /api/reconciliation/match - Create reconciliation match",
+    "POST /api/reconciliation/reverse - Reverse reconciliation",
+    "GET /api/entities - List customers/suppliers",
+    "POST /api/entities - Create new entity",
+    "GET /api/integrations/mercadopago/movements - Get MercadoPago transactions",
+    "POST /api/webhooks/mercadopago - MercadoPago webhook handler"
+  ]
+}
